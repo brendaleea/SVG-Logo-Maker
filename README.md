@@ -8,7 +8,7 @@ Users will be able to generate a logo and save it as an SVG file. The applicatio
 
 ## Visuals/Usage
 
-![ReadMe Generator](./)
+![SVG Logo](./)
 
 Link for video submission: 
 
