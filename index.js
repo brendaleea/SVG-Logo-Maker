@@ -1,6 +1,6 @@
 const inquirer = require("inquirer");
-const { circle, Square, Triangle } = require("./lib/shapes");
-const inquirer = require('./node_modules/graceful-fs/graceful-fs')
+const fs = require('fs')
+const { Circle, Square, Triangle } = require("./lib/shapes");
 
 
 
@@ -13,13 +13,13 @@ const questions = [
   {
     type: "input",
     message: "TEXT COLOR: Enter a color keyword (OR a hexadecimal number):",
-    name: "Text-Color",
+    name: "Text_Color",
   },
 
   {
     type: "input",
     message: "SHAPE COLOR: Enter a color keyword (OR a hexadecimal number):",
-    name: "Shape-Color",
+    name: "Shape_Color",
   },
 
   {
@@ -28,4 +28,53 @@ const questions = [
     name: "Shape",
     choices: ["Circle", "Square", "Triangle"],
   },
-];
+]
+
+
+
+
+
+
+
+
+
+
+function generateSVG(shape,answers,) {
+ return `
+ <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
+ ${shape.render()}
+ </svg>
+
+ ` 
+}
+
+
+function init() {
+  inquirer.prompt(questions)
+
+
+
+  .then((answers) => {
+  
+    if(answers.Shape=="Circle"){
+      const circle = new Circle (answers.Shape_Color) 
+      fs.writeFileSync("./logo.svg", generateSVG(circle,answers))
+    }
+    if(answers.Shape=="Square"){
+      const circle = new Square (answers.Shape_Color)
+      fs.writeFileSync("./logo.svg", generateSVG(square,answers))
+    }
+  
+    if(answers.Shape=="Triangle"){
+      const circle = new Triangle (answers.Shape_Color)
+      fs.writeFileSync("./logo.svg", generateSVG(triangle,answers))
+    }
+  
+  })
+  
+  
+
+
+}
+
+init()
