@@ -61,12 +61,12 @@ function init() {
       fs.writeFileSync("./logo.svg", generateSVG(circle,answers))
     }
     if(answers.Shape=="Square"){
-      const circle = new Square (answers.Shape_Color)
+      const square = new Square (answers.Shape_Color)
       fs.writeFileSync("./logo.svg", generateSVG(square,answers))
     }
   
     if(answers.Shape=="Triangle"){
-      const circle = new Triangle (answers.Shape_Color)
+      const triangle = new Triangle (answers.Shape_Color)
       fs.writeFileSync("./logo.svg", generateSVG(triangle,answers))
     }
   
