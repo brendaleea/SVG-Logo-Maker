@@ -1,4 +1,4 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="300" height="200">
-<polygon fill="green" points="70,180 230,180 150,20"/>
-<text x="150" y="140" font-size="60" text-anchor="middle" fill="pink">svg</text>
+<polygon fill="pink" points="70,180 230,180 150,20"/>
+<text x="150" y="140" font-size="60" text-anchor="middle" fill="green">SVG</text>
 </svg>

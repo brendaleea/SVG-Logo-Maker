@@ -10,7 +10,8 @@ Users will be able to generate a logo and save it as an SVG file. The applicatio
 
 ![SVG Logo](./Assets/svg.png)
 
-Link for video submission: Coming soon
+Link for video submission: https://drive.google.com/file/d/1b6_palHhbjr0k_J-ZPesJLbtBFdRcgRU/view
+
 
 Link to deployed website: N/A
 
